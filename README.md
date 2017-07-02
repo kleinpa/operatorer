@@ -8,7 +8,7 @@ external devices that aren't natively compatible. It extends the built in
 synchronization to accept a 24ppqn signal from a synth or MIDI Clock over USB,
 and make sure the Pocket Operator's pattern gets reset whenever the clock stops.
 
-[![Operatorer](http://i.imgur.com/qItXMh2.jpg)](http://imgur.com/qItXMh2)
+[![Prototype](http://i.imgur.com/qItXMh2.jpg)](http://imgur.com/qItXMh2)
 
 The Pocket Operator expects a 2ppqn (pulses per quarter note) sync signal which
 is not all devices support (like my Arturia Keystep). Operatorer will act as a
@@ -25,3 +25,19 @@ device.
 Just for fun, it supports a ring of 7 addressable RGB LEDs (NeoPixel Jewel) to
 display the clock and the current clock source. This is certainly an optional
 part of the project but has been helpful for debugging and looks nice.
+
+Build
+-----
+Operatorer is very simple to build. The digital sync pulses (from my sequencer 
+at least) are directly compatible with the Arduino's GPIO.  3.5 mm jacks could
+be used for a more professional build but my prototype used some header pins
+spliced into a mono patch cable. Eventually I'd like to design an enclosure.
+
+[![Schematic](http://i.imgur.com/B4j4rUa.png)](http://imgur.com/a/dePGH)
+
+
+| Pin  | Connection |
+| ---- | ---------- |
+| 7    | Sync In    |
+| 8    | Sync Out   |
+| 15   | LED Data   |
