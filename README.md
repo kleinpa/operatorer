@@ -26,12 +26,16 @@ Just for fun, it supports a ring of 7 addressable RGB LEDs (NeoPixel Jewel) to
 display the clock and the current clock source. This is certainly an optional
 part of the project but has been helpful for debugging and looks nice.
 
-Build
------
+Hardware
+--------
 Operatorer is very simple to build. The digital sync pulses (from my sequencer 
 at least) are directly compatible with the Arduino's GPIO.  3.5 mm jacks could
 be used for a more professional build but my prototype used some header pins
 spliced into a mono patch cable. Eventually I'd like to design an enclosure.
+
+I am a fan of Sparkfun's Pro Micro board and chose it because it's procerssor,
+Atmega32U4, has native USB support allowing it to appear as a standard USB MIDI
+device. It's also small, flexible, and has a convenient micro USB port.
 
 [![Schematic](http://i.imgur.com/B4j4rUa.png)](http://imgur.com/a/dePGH)
 
